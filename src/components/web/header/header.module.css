@@ -1,0 +1,57 @@
+
+
+
+.title{
+    font-size: 72px;
+    color: rgba(14, 213, 213, 0.656) !important;
+    max-width: 100%;
+    margin-bottom: 20px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+.namestor{
+    font-size: 77px;
+    color: rgb(37, 131, 214);
+    font-family:'Times New Roman', Times, serif;
+}
+.header{
+   background-attachment: fixed;
+   background-image: url('./../../img/backgr.jpg') ;
+   background-repeat: no-repeat;
+   background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.welcome{
+    max-width: 500px;
+}
+.title2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px !important;
+    animation: 3s linear 1s infinite alternate slidein;
+    color: rgba(19, 213, 213, 0.934) !important;
+    -webkit-animation: 3s linear 1s infinite alternate slidein;
+}
+@keyframes slidein {
+    from {
+      transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+      -o-transform: translateX(0px);
+}
+    to {
+      transform: translateX(200px);
+    }
+}
+.footer{
+ 
+    background-attachment: fixed;
+    background-image: url('./../../img/backgro.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 30vh;
+    max-width: 100%;    
+}

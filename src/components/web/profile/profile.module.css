@@ -1,0 +1,26 @@
+.profile{
+    display: flex;
+  gap: 40px;
+  height: auto; /* أو ما تحط height */
+  min-height: auto; 
+}
+.profile_links nav{
+    background-color: rgb(13, 198, 245) ;
+    height:calc(30vh - 56px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top:20px ;
+}
+.profile_links{
+    width: 300px;
+}
+.userData{
+    flex-grow: 1;   padding: 0 20px; /* فراغ 20px يمين ويسار */
+
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}

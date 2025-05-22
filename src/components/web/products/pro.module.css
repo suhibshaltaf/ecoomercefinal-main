@@ -1,0 +1,93 @@
+.pro{
+    background-color: rgb(16, 189, 223) !important;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   height: 400px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.pro h2,p{
+    color:#fff !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-align: center;
+}
+[disabled]:hover{
+    background-color: rgb(16, 189, 223) !important;
+cursor: not-allowed;
+}
+.stars{
+    display: flex;
+    flex-direction: row;
+}
+.details{
+    border-radius: 10px !important;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    background: rgb(4, 166, 174);
+    background: radial-gradient(circle, rgb(12, 143, 182) 0%, rgb(9, 124, 166) 100%);
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.details:hover,.create_review_link:hover{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+}
+.review_img{
+    width: 100px;
+    height: 100px ;
+    margin: auto;
+}
+
+.create_review_link{
+    color: #fff;
+    background: rgb(4, 166, 174);
+    background: radial-gradient(circle, rgb(12, 143, 182) 0%, rgb(9, 124, 166) 100%);
+    border-radius: 10px;
+}
+.image{
+    width: 200px;
+    height: 200px;
+    margin: 30px 10px;
+}
+.price{
+    color: black !important;
+    text-align: left !important;
+}
+select{
+    border-radius: 5px;
+    padding: 5px;
+    border: rgb(22, 151, 173) solid 1px;
+    margin-bottom: 10px;
+}
+.search{
+    background-color: rgb(16, 189, 223) !important;
+    box-shadow: none;
+    display: inline-block;
+    margin: 0 !important;
+    width: 305px !important;
+}
+
+.submit,.reset{
+    background: rgb(4, 166, 174);
+    background: radial-gradient(circle, rgb(12, 143, 182) 0%, rgb(9, 124, 166) 100%);
+    color: #fff !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    padding: 5px 7px;
+}
+.reset{
+    border-radius: 5px;
+}
+.min,.max{
+    width: 50px;
+}
+.buttext{
+    color: rgb(5, 45, 110) !important;
+}
