@@ -16,7 +16,7 @@ export default function Footer() {
      
      
      </div>
-      <p class="mb-0">&copy; 2025 All rights reserved. Developed by <strong>صهيب شلطف</strong>.</p>
+      <p class="mb-0">&copy; 2025 All rights reserved. Developed by <strong> suhib shaltaf</strong>.</p>
 
 
     </div>
