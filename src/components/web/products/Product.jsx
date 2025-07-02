@@ -9,6 +9,7 @@ import { FaRegStar, FaStar } from "react-icons/fa6";
 export default function Product() {
   const { id } = useParams();
   const { addToCartContext } = useContext(CartContext);
+  const isLoggedIn = !!localStorage.getItem("userToken"); // فحص إذا في تسجيل دخول
 
   const getProduct = async () => {
     const { data } = await axios.get(
@@ -47,6 +48,7 @@ export default function Product() {
               <img
                 src={image.secure_url}
                 className={`${style.image} img-thumbnail`}
+                alt="Product"
               />
             </React.Fragment>
           ))}
@@ -59,12 +61,19 @@ export default function Product() {
           <p className={`${style.price}`}>
             <b>Price: {`$ ${data.price}`}</b>
           </p>
-          <button
-            className={`${style.buttext} btn btn-primary`}
-            onClick={() => addToCart(data._id)}
-          >
-            Add To Cart
-          </button>
+
+          {isLoggedIn ? (
+            <button
+              className={`${style.buttext} btn btn-primary`}
+              onClick={() => addToCart(data._id)}
+            >
+              Add To Cart
+            </button>
+          ) : (
+            <p className="text-danger mt-2">
+Please log in to add the product to the cart.
+            </p>
+          )}
         </div>
       </div>
 
@@ -82,9 +91,13 @@ export default function Product() {
               )}
               <div className="card-body text-center">
                 <h5 className="card-title">{review.createdBy.userName}</h5>
-                <p className="card-text text-dark">{getStars(review.rating)}</p>
+                <p className="card-text text-dark">
+                  {getStars(review.rating)}
+                </p>
                 <p className="card-text">
-                  <small className="text-body-secondary">{review.comment}</small>
+                  <small className="text-body-secondary">
+                    {review.comment}
+                  </small>
                 </p>
               </div>
             </div>
@@ -92,12 +105,18 @@ export default function Product() {
         </div>
 
         <div className="create_Review d-flex justify-content-center">
-          <Link
-            className={`${style.create_review_link} text-decoration-none d-flex bg-info py-3 px-2 mb-2`}
-            to={`review`}
-          >
-            Add Review
-          </Link>
+          {isLoggedIn ? (
+            <Link
+              className={`${style.create_review_link} text-decoration-none d-flex bg-info py-3 px-2 mb-2`}
+              to={`review`}
+            >
+              Add Review
+            </Link>
+          ) : (
+            <p className="text-danger mb-3">
+Please log in to write a review.
+            </p>
+          )}
         </div>
       </div>
     </div>
